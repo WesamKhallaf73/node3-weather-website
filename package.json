@@ -1,7 +1,6 @@
 {
   "name": "web-server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node  src/app.js"
@@ -13,5 +12,14 @@
     "express": "^4.17.1",
     "hbs": "^4.2.0",
     "request": "^2.88.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WesamKhallaf73/node3-weather-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WesamKhallaf73/node3-weather-website/issues"
+  },
+  "homepage": "https://github.com/WesamKhallaf73/node3-weather-website#readme",
+  "description": ""
 }
