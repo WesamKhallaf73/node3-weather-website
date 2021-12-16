@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
     messageOne.textContent = 'loading .... '
     messageTwo.textContent =''
 
-    fetch('http://localhost:3000/weather?address='+search.value).then((response) => {
+    fetch('/weather?address='+search.value).then((response) => {
         response.json().then((data)=>{  //data recieved from back end node server
             if (data.error) {
                return  messageOne.textContent = data.error 
@@ -34,7 +34,7 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
             console.log(data.longitude)
 
             messageOne.textContent = " location : " +  data.city 
-            messageTwo.textContent =  " Temprature : " + data.degree + "degree and  it feels like  " + data.feels_like +" degree "+ "  ,it is " + data.weather_description + "  and chance of rain is " + data.ChanceOfRain
+            messageTwo.textContent =  " Temprature : " + data.degree + " degree and  it feels like  " + data.feels_like +" degree "+ "  ,it is " + data.weather_description + "  and chance of rain is " + data.ChanceOfRain
             
 
            

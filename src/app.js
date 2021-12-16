@@ -9,7 +9,7 @@ const publicDirectoryPath = path.join(__dirname , '../public')
 const viewsDirectoryPath = path.join(__dirname , '../templates/views')
 const parthialDirectoryPath = path.join(__dirname , '../templates/partials')
 const app = express()
-
+const port = process.env.PORT || 3000
 
 // set up handle bars engine and views location
 app.set('view engine' , 'hbs')
@@ -144,6 +144,6 @@ app.get('*' , (request , response) => {
 })
 
 
-app.listen(3000  , () => {
-    console.log(' server is up in port 3000')
+app.listen(port  , () => {
+    console.log(' server is up in port '+ port)
 })
