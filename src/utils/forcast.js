@@ -42,6 +42,7 @@ request({url : url , json :true } , (error , response) => {
 
    const windSpeed = response.body.current.wind_speed
    const windDirection = response.body.current.wind_dir
+   const humidity = response.body.current.humidity
     
    
    
@@ -61,7 +62,8 @@ request({url : url , json :true } , (error , response) => {
         chanceOfRain  , 
         city ,
          windSpeed ,
-         windDirection
+         windDirection , 
+         humidity
 
 
 

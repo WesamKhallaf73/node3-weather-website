@@ -11,6 +11,7 @@ const messageThree  = document.querySelector('#message-3')
 const messageFour  = document.querySelector('#message-4')
 const messageFive  = document.querySelector('#message-5')
 const messageSix = document.querySelector('#message-6')
+const messageSeven = document.querySelector('#message-7')
 
 
 weatherForm.addEventListener('submit' , (e)=> {     // e for event  
@@ -23,6 +24,8 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
     messageFour.textContent =''
     messageFive.textContent =''
     messageSix.textContent =''
+    messageSeven.textContent =''
+
 
     fetch('/weather?address='+search.value).then((response) => {
         response.json().then((data)=>{  //data recieved from back end node server
@@ -48,6 +51,7 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
             messageFour.textContent ="  and chance of rain is " + data.ChanceOfRain
             messageFive.textContent ='wind speed is ' + data.windSpeed
             messageSix.textContent ='wind direction is  ' + data.windDirection
+            messageSeven.textContent ='Humidity : '  + data.humidity
         
 
            

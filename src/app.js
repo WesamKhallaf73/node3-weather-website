@@ -98,7 +98,8 @@ app.get('/weather' , (request , response) => {
                 ChanceOfRain : weatherData.chanceOfRain ,
                 city : weatherData.city ,
                 windDirection :weatherData.windDirection  ,
-                windSpeed : weatherData.windSpeed
+                windSpeed : weatherData.windSpeed  ,
+                humidity : weatherData.humidity
 
 
 
