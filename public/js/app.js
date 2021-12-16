@@ -7,6 +7,10 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('Input')
 const messageOne  = document.querySelector('#message-1')
 const messageTwo  = document.querySelector('#message-2')
+const messageThree  = document.querySelector('#message-3')
+const messageFour  = document.querySelector('#message-4')
+const messageFive  = document.querySelector('#message-5')
+const messageSix = document.querySelector('#message-6')
 
 
 weatherForm.addEventListener('submit' , (e)=> {     // e for event  
@@ -15,6 +19,10 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
     console.log('you are searched  weather for ' + search.value)
     messageOne.textContent = 'loading .... '
     messageTwo.textContent =''
+    messageThree.textContent =''
+    messageFour.textContent =''
+    messageFive.textContent =''
+    messageSix.textContent =''
 
     fetch('/weather?address='+search.value).then((response) => {
         response.json().then((data)=>{  //data recieved from back end node server
@@ -34,8 +42,13 @@ weatherForm.addEventListener('submit' , (e)=> {     // e for event
             console.log(data.longitude)
 
             messageOne.textContent = " location : " +  data.city 
-            messageTwo.textContent =  " Temprature : " + data.degree + " degree and  it feels like  " + data.feels_like +" degree "+ "  ,it is " + data.weather_description + "  and chance of rain is " + data.ChanceOfRain
-            
+            messageTwo.textContent =  " Temprature : " + data.degree + " degree and  it feels like  " + data.feels_like +" degree "
+            messageThree.textContent ="it is " + data.weather_description
+           
+            messageFour.textContent ="  and chance of rain is " + data.ChanceOfRain
+            messageFive.textContent ='wind speed is ' + data.windSpeed
+            messageSix.textContent ='wind direction is  ' + data.windDirection
+        
 
            
            // console.log('feels like   ' + weatherData.feelslike)

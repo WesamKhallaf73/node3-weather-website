@@ -96,7 +96,11 @@ app.get('/weather' , (request , response) => {
                 weather_description :weatherData.weather_description ,
                 feels_like : weatherData.feelslike , 
                 ChanceOfRain : weatherData.chanceOfRain ,
-                city : weatherData.city
+                city : weatherData.city ,
+                windDirection :weatherData.windDirection  ,
+                windSpeed : weatherData.windSpeed
+
+
 
 
                 

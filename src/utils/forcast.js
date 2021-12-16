@@ -40,7 +40,9 @@ request({url : url , json :true } , (error , response) => {
   // const city = response.body.request.query
    const city = response.body.location.name + "  " + response.body.location.country  + "  " + response.body.location.region
 
-   
+   const windSpeed = response.body.current.wind_speed
+   const windDirection = response.body.current.wind_dir
+    
    
    
    //console.log(city )
@@ -57,7 +59,11 @@ request({url : url , json :true } , (error , response) => {
         feelslike  ,
         weather_description  , 
         chanceOfRain  , 
-        city
+        city ,
+         windSpeed ,
+         windDirection
+
+
 
     }
  
